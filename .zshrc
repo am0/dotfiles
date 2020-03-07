@@ -11,6 +11,7 @@ export ZSH="/Users/alex/.oh-my-zsh"
 ZSH_THEME="spaceship"
 
 DISABLE_AUTO_TITLE="true"
+COMPLETION_WAITING_DOTS="true"
 
 plugins=(
   brew
