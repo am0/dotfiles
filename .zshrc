@@ -36,25 +36,6 @@ source $ZSH/oh-my-zsh.sh
 # Set personal aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-function webm() {
-    if [ "$2" != "" ]; then
-        ffmpeg -threads 4 -i $1 -c:v libvpx -an -b:v 700K -vf scale=$2:-1 $1.$2.webm
-    else
-        if [ "$1" != "" ]; then
-            ffmpeg -threads 4 -i $1 -c:v libvpx -an -b:v 700K $1.webm
-        fi
-    fi
-}
-function webma() {
-    if [ "$2" != "" ]; then
-        ffmpeg -threads 4 -i $1 -c:v libvpx -b:v 700K -vf scale=$2:-1 $1.webm
-    else
-        if [ "$1" != "" ]; then
-            ffmpeg -threads 4 -i $1 -c:v libvpx -b:v 700K $1.webm
-        fi
-    fi
-}
-
 alias png2jpg="for file in *.png; do convert $file "`basename $file .png`.jpg"; done"
 alias jpg2png="for file in *.jpg; do convert $file "`basename $file .jpg`.png"; done"
 alias ffs='fc -e "sed -i -e \"s/^/sudo /\""'
