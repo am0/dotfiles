@@ -1,0 +1,13 @@
+[user]
+	name = Alex Moyler
+	email = alex@alexm.co
+[credential]
+	helper = osxkeychain
+[alias]
+	s = status -s
+[color]
+	ui = true
+[core]
+  preloadindex = true
+	editor = nano
+  excludesfile = ~/.global_ignore
